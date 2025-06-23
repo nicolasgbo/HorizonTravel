@@ -1,0 +1,357 @@
+/*Estilizando as duas navbars criadas (uma criada para o index.php e outra para o resto do projeto)*/
+.navbar-index,
+.navbar-padrao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* ======= Navbar Index (transparente + blur) ======= */
+.navbar-index {
+  background-color: rgba(245, 245, 245, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Links e marca da navbar-index */
+.navbar-index .nav-link,
+.navbar-index .navbar-brand,
+.navbar-index .dropdown-item {
+  color: #004aad;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-index .nav-link:hover,
+.navbar-index .dropdown-item:hover {
+  color: #002a75;
+}
+
+/* Dropdown menu da navbar-index */
+.navbar-index .dropdown-menu {
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.navbar-index .dropdown-item {
+  color: #004aad;
+  font-weight: 500;
+}
+
+.navbar-index .dropdown-item:hover {
+  background-color: #004aad;
+  color: white;
+}
+
+/* Botão WhatsApp da navbar-index */
+.navbar-index .custom-whatsapp-btn {
+  background-color: rgba(0, 74, 173, 0.1);
+  color: #004aad;
+  font-weight: 600;
+  border: 1px solid #004aad;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 6px 12px;
+}
+
+.navbar-index .custom-whatsapp-btn:hover {
+  background-color: #004aad;
+  color: white;
+}
+
+/* ======= Navbar Padrão (fundo branco) ======= */
+.navbar-padrao {
+  background-color: white;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Links e marca da navbar-padrao */
+.navbar-padrao .nav-link,
+.navbar-padrao .navbar-brand,
+.navbar-padrao .dropdown-item {
+  color: #004aad;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-padrao .nav-link:hover,
+.navbar-padrao .dropdown-item:hover {
+  color: #002a75;
+}
+
+/* Dropdown menu da navbar-padrao */
+.navbar-padrao .dropdown-menu {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.navbar-padrao .dropdown-item {
+  color: #004aad;
+  font-weight: 500;
+}
+
+.navbar-padrao .dropdown-item:hover {
+  background-color: #004aad;
+  color: white;
+}
+
+/* Botão WhatsApp da navbar-padrao */
+.navbar-padrao .custom-whatsapp-btn {
+  background-color: rgba(0, 74, 173, 0.1);
+  color: #004aad;
+  font-weight: 600;
+  border: 1px solid #004aad;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 6px 12px;
+}
+
+.navbar-padrao .custom-whatsapp-btn:hover {
+  background-color: #004aad;
+  color: white;
+}
+
+.pagina-comum {
+  padding-top: 85px;
+}
+/*</FIM>*/
+
+/*Estilização dos footers (Footer principal) */
+footer.footer {
+  background-color: #004aad;
+  color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+footer.footer h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+footer.footer ul li,
+footer.footer a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+footer.footer ul li:hover,
+footer.footer a:hover {
+  color: #cce4ff;
+  text-decoration: underline;
+  transition: 0.2s;
+}
+
+/* Botões de redes sociais */
+.footer .btn-floating {
+  background-color: #ffffff;
+  color: #004aad;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 40px;
+  text-align: center;
+}
+
+.footer .btn-floating:hover {
+  background-color: #cce4ff;
+  color: #004aad;
+}
+
+/* Seção de direitos autorais */
+.footer-git {
+  background-color: #e5e5e5;
+  color: #222;
+  font-size: 0.9rem;
+}
+
+.footer-git a {
+  color: #004aad;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-git a:hover {
+  text-decoration: underline;
+}
+/*</FIM>*/
+
+/*Deixando o carrosel para preencher toda a tela do usuário*/
+.carousel {
+  height: 100vh; /*Definindo 100% da altura  da tela do navegador*/
+  overflow: hidden; /*Esconde o conteúdo que ultrapasse os limites do carrosel*/
+}.carousel .carousel-inner,
+.carousel .carousel-item,
+.carousel .carousel-item img {
+  height: 100vh; /*Garantindo que as imagens tenha a mesma altura da tela*/
+  object-fit: cover; /*Preenche completamente o espaco disponivel sem distorcer, corta o excesso se necessario*/
+}
+.carousel .hidden {
+  display: none;
+}
+/*</FIM>*/
+
+/*Estilização da Newsletter*/
+.newsletter {
+padding: 15px 0;
+background: #e5e5e5;
+}
+
+.newsletter .content {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 2; }
+.newsletter .content h2 {
+color: #004aad;
+margin-bottom: 40px; }
+.newsletter .content .form-control {
+height: 50px;
+border-color: #ffffff;
+border-radius:0;
+}
+.newsletter .content.form-control:focus {
+box-shadow: none;
+border: 2px solid #243c4f;
+}
+.newsletter .content .btn {
+min-height: 50px; 
+border-radius:0;
+background: #004aad;
+color: #fff;
+font-weight:600;
+}
+/*</FIM>*/
+
+
+
+/* Sessões com cards (destinos e vantagens) */
+.cards,
+.vantagens {
+  background-color: #f5f5f5;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.cards .card,
+.vantagens .card {
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.cards .card:hover,
+.vantagens .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cards .card-title,
+.vantagens .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #004aad;
+}
+
+.cards .card-text,
+.vantagens .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.cards .card-body,
+.vantagens .card-body {
+  padding: 20px;
+}
+
+/* Títulos das seções */
+.vantagens h1,
+.cards h1 {
+  font-weight: bold;
+  color: #004aad;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.vantagens h5 {
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.vantagens i,
+.cards i {
+  color: #004aad;
+}
+/*FIM*/
+
+/* Estilização das páginas de login e registro */
+.card-autenticacao {
+  color: white;
+}
+
+.card-autenticacao .card {
+  border: none;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 1rem;
+}
+
+.card-autenticacao .form-label {
+  font-weight: 600;
+  color: #004aad;
+}
+
+.card-autenticacao .form-control {
+  border: 2px solid #dee2e6;
+  border-radius: 0.5rem;
+}
+
+.card-autenticacao .btn-primary {
+  background-color: #004aad;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.card-autenticacao .btn-primary:hover {
+  background-color: #00378c;
+}
+
+.card-autenticacao .text-primary {
+  color: #004aad !important;
+}
+
+.card-autenticacao a.text-primary:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
