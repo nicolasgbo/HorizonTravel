@@ -95,8 +95,8 @@
     </section>
 
     <!--Direitos reservados-->
-    <div class="footer-git text-center p-3" style="background-color: #e5e5e5 !important;">
-      © 2025 By:
-      <a class="footer-git" href="https://github.com/nicolasgbo" target="_blank">Nicolas Gabriel de Oliveira</a>
+    <div class="footer-git text-center p-3" style="background-color: #e5e5e5 !important; color: #004aad;">
+      <a>© 2025 By:</a>
+      <a class="footer-git" href="https://github.com/nicolasgbo" target="_blank" style="color: #004aad !important;">Nicolas Gabriel de Oliveira</a>
     </div>
   </footer>

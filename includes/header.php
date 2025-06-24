@@ -41,13 +41,8 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="/HorizonTravel/index.php">Início</a>
                     </li>
-                    <li class="nav-item dropdown mx-2">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Passeios</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Florianópolis</a></li>
-                            <li><a class="dropdown-item" href="#">Lençóis Maranhenses</a></li>
-                            <li><a class="dropdown-item" href="#">Bonito</a></li>
-                        </ul>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/HorizonTravel/pages/passeios.php">Passeios</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="/HorizonTravel/pages/planos.php">Planos</a>
