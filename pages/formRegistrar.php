@@ -15,15 +15,15 @@ include_once INCLUDE_PATH . '/header.php';
               <h2 class="fw-bold mb-2 text-uppercase text-primary">Registre-se</h2>
               <p class="mb-4">Por favor, preencha os campos para registrar-se!</p>
 
-              <form method="POST" action="#"> <!-- Coloque o action certo depois -->
+              <form method="POST" action="registrar.php"> <!-- Coloque o action certo depois -->
                 <div class="form-outline mb-3 text-start">
                   <label class="form-label" for="nomeUsuario">Nome Completo</label>
                   <input type="text" id="nomeUsuario" name="nomeUsuario" class="form-control form-control-lg" required />
                 </div>
 
                 <div class="form-outline mb-3 text-start">
-                  <label class="form-label" for="dataUsuario">Data de Nascimento</label>
-                  <input type="date" id="dataUsuario" name="dataUsuario" class="form-control form-control-lg" required />
+                  <label class="form-label" for="dataNascimentoUsuario">Data de Nascimento</label>
+                  <input type="date" id="dataNascimentoUsuario" name="dataNascimentoUsuario" class="form-control form-control-lg" required />
                 </div>
 
                 <div class="form-outline mb-3 text-start">
