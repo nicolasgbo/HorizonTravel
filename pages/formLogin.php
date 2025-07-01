@@ -36,7 +36,7 @@ include_once INCLUDE_PATH . '/header.php';
               </div>
 
               <p class="mt-4 mb-0">Ainda não tem sua conta?
-                <a href="/HorizonTravel/pages/registrar.php" class="fw-bold text-primary">Registre-se</a>
+                <a href="/HorizonTravel/pages/formRegistrar.php" class="fw-bold text-primary">Registre-se</a>
               </p>
             </div>
           </div>

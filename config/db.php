@@ -9,7 +9,7 @@
 
     //Caso der erro de conexão com o banco de dados, lançar erro
     if(!$conn) {
-        echo 
-        "<p>Erro ao Tentar conectar a base de dados <strong>$database</strong>!</p>";
+        //Usando mysqli_connect_error() para mostrar o erro real de conexão e usando die para encerrar a tentativa
+        die("<p>Erro ao tentar conectar a base de dados <strong>$database</strong>: " . mysqli_connect_error() . "</p>");
     }
 ?>

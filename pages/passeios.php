@@ -48,7 +48,7 @@ include_once INCLUDE_PATH . '/header.php';
             </div>
             <div class="col-md-4">
                 <div class="card card-imagem">
-                    <img src="../img/lencois_maranhenses.jpg" class="card-img-top" alt="Lagoas cristalinas">
+                    <img src="../img/lencois_maranhenses.jpeg" class="card-img-top" alt="Lagoas cristalinas">
                 </div>
             </div>
             <div class="col-md-4">
@@ -75,7 +75,7 @@ include_once INCLUDE_PATH . '/header.php';
             </div>
             <div class="col-md-4">
                 <div class="card card-imagem">
-                    <img src="../img/grutaazul_bonito.png" class="card-img-top" alt="Gruta Azul">
+                    <img src="../img/gruta_azul.png" class="card-img-top" alt="Gruta Azul">
                 </div>
             </div>
             <div class="col-md-4">

@@ -4,6 +4,23 @@ include_once '../config/config.php';
 include_once INCLUDE_PATH . '/header.php';
 ?>
 
+<!--Incluindo a validação de JavaScript-->
+<script src="../js/validarRegistro.js" defer></script>
+
+<!--Exibindo as mensagens de erro feita por validações no Back-end-->
+<?php if (!empty($erro)): ?> <!--Se a variável erro estiver diferente de vazio, vai exibir os erros-->
+    <div class="alert alert-danger">
+        <ul>
+            <!--Itera no array de erro e procura todas as mensagens de erro-->
+            <?php foreach ($erro as $msg): ?>
+                <!--htmlspecialchars transforma caracteres especiais em HTML-->
+                <li><?= htmlspecialchars($msg) ?></li>
+            <!--Finalizando a iteração-->
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>
+
 <body class="pagina-comum">
   <section class="min-vh-100 card-autenticacao d-flex align-items-center justify-content-center">
     <div class="container py-5">
@@ -15,7 +32,7 @@ include_once INCLUDE_PATH . '/header.php';
               <h2 class="fw-bold mb-2 text-uppercase text-primary">Registre-se</h2>
               <p class="mb-4">Por favor, preencha os campos para registrar-se!</p>
 
-              <form method="POST" action="registrar.php"> <!-- Coloque o action certo depois -->
+              <form id="formRegistrar" method="POST" action="registrar.php"> <!-- Coloque o action certo depois -->
                 <div class="form-outline mb-3 text-start">
                   <label class="form-label" for="nomeUsuario">Nome Completo</label>
                   <input type="text" id="nomeUsuario" name="nomeUsuario" class="form-control form-control-lg" required />
