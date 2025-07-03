@@ -1,3 +1,10 @@
+<?php
+//Verificando se a sessão foi iniciada
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,15 +28,19 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <!-- CDNs para Máscaras JQuery-->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <!-- Script para máscara do telefone -->
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $("#telefoneUsuario").mask("(00) 00000-0000");
     });
 </script>
@@ -57,9 +68,15 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="/HorizonTravel/pages/planos.php">Planos</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="/HorizonTravel/pages/Formlogin.php">Login</a>
-                    </li>
+                    <?php if (!isset($_SESSION['idUsuario'])): ?>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="/HorizonTravel/pages/formlogin.php">Login</a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="/HorizonTravel/controllers/logout.php">Sair</a>
+                        </li>
+                    <?php endif; ?>
                     <li class="nav-item mx-2">
                         <a class="btn custom-whatsapp-btn" href="https://wa.me/seu_numero" target="_blank">
                             <i class="fab fa-whatsapp"></i> Enviar mensagem

@@ -15,7 +15,7 @@ include_once INCLUDE_PATH . '/header.php';
               <h2 class="fw-bold mb-3 text-uppercase text-primary">Login</h2>
               <p class="mb-4">Por favor, insira seu e-mail e senha para continuar</p>
 
-              <form method="POST" action="#"> <!-- você pode colocar action real depois -->
+              <form method="POST" action="../controllers/login.php">
                 <div class="form-outline mb-4 text-start">
                   <label class="form-label" for="emailUsuario">Email</label>
                   <input type="email" id="emailUsuario" name="emailUsuario" class="form-control form-control-lg" required />

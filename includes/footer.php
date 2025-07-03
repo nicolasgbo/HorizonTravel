@@ -34,16 +34,13 @@
           <!--Criando a lista de links-->
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#">Início</a>
+              <a href="/HorizonTravel/index.php">Início</a>
             </li>
             <li>
-              <a href="#">Passeios</a>
+              <a href="/HorizonTravel/pages/passeios.php">Passeios</a>
             </li>
             <li>
-              <a href="#">Planos</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
+              <a href="/HorizonTravel/pages/planos.php">Planos</a>
             </li>
           </ul>
         </div>

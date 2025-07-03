@@ -1,9 +1,5 @@
 <?php 
-$navbarClass = 'navbar-padrao';
-include_once '../config/config.php';
-include_once INCLUDE_PATH . '/header.php';
-
-
+session_start();
 //Definindo as variáveis
 $nomeUsuario = $dataNascimentoUsuario = $telefoneUsuario = $emailUsuario = $senhaUsuario = $confirmarSenhaUsuario = "";
 $erro = []; //Variável para declarar erros
@@ -73,20 +69,38 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         //Verificando se a conexão foi feita corretamente com o Banco de dados
         if($conn){
+            // Verificando se o e-mail já existe
+            $verificaQuery = $conn->prepare("SELECT idUsuario FROM usuarios WHERE emailUsuario = ?");
+            $verificaQuery->bind_param("s", $emailUsuario);
+            $verificaQuery->execute();
+            $verificaQuery->store_result();
+
+            if ($verificaQuery->num_rows > 0) {
+                $erro[] = "Este e-mail já está cadastrado!";
+                $_SESSION['erros'] = $erro;
+                header("Location: ../pages/formRegistrar.php");
+                exit;
+            }
+
+            $verificaQuery->close();
+            
             //Preparando a hash da senha para inserir no banco de dados.
             $senhaComHash = password_hash($senhaUsuario, PASSWORD_DEFAULT);
+            //Definindo por padrão que o tipo do usuário será cliente, só sera alterado para o tipo admin pelo BD
+            $tipoUsuario = 'cliente';
 
             //Preparando a query para receber os valores, evitando SQL Injection
-            $query = $conn->prepare("INSERT INTO Usuarios (nomeUsuario, dataNascimentoUsuario, telefoneUsuario, emailUsuario, senhaUsuario) VALUES (?, ?, ?, ?, ?)");
+            $query = $conn->prepare("INSERT INTO usuarios (nomeUsuario, dataNascimentoUsuario, telefoneUsuario, emailUsuario, senhaUsuario, tipoUsuario) VALUES (?, ?, ?, ?, ?, ?)");
 
             //Passando os valores da query com segurança
-            $query->bind_param("sssss", $nomeUsuario, $dataNascimentoUsuario, $telefoneUsuario, $emailUsuario, $senhaComHash);
+            $query->bind_param("ssssss", $nomeUsuario, $dataNascimentoUsuario, $telefoneUsuario, $emailUsuario, $senhaComHash, $tipoUsuario);
 
             //Executando a query
             if($query->execute()) {
-                echo "<p class= 'alert alert-success'>Usuário cadastrado com sucesso!</p>";
+                header("Location: ../pages/sucesso.php");
+                exit;
             } else { //Caso a execução da query falhe, lança erro
-                $erro[] = "Erro ao cadastrar o usuário: " . $query->error;
+                $erro[] = "Erro ao cadastrar o usuário, tente mais tarde!";
             }
 
             $query->close(); //Fecha a query
@@ -94,6 +108,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         } else {
             $erro[] = "Erro na conexão com o banco de dados";
         }
+    }
+    // Se chegou aqui, tem erro(s) — salva na sessão e redireciona
+    if (!empty($erro)) {
+        $_SESSION['erros'] = $erro;
+        header("Location: ../pages/formRegistrar.php");
+        exit;
     }
     
 }

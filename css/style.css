@@ -481,6 +481,34 @@ font-weight:600;
   margin: 0 auto;
 }
 
+.footer-admin{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #e5e5e5;
+  color: #004aad;
+  text-align: center;
+  padding: 12px 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+footer a {
+  color: #004aad;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #003780;
+  text-decoration: underline;
+}
+
+
 
 
 
