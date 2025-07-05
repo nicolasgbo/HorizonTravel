@@ -12,6 +12,9 @@ if (!isset($_SESSION['tipoUsuario']) || $_SESSION['tipoUsuario'] !== 'admin') {
 
 $resultado = mysqli_query($conn, "SELECT COUNT(*) AS total FROM usuarios");
 $totalUsuarios = mysqli_fetch_assoc($resultado)['total'];
+
+$resultadoReservas = mysqli_query($conn, "SELECT COUNT(*) AS total FROM reservas");
+$totalReservas = mysqli_fetch_assoc($resultadoReservas)['total'];
 ?>
 
 <body class="pagina-comum" style="padding-top: 100px;">
@@ -27,6 +30,17 @@ $totalUsuarios = mysqli_fetch_assoc($resultado)['total'];
                     <div class="card-body text-center">
                         <h5 class="card-title text-muted mb-2">Usuários Cadastrados</h5>
                         <p class="display-4 fw-bold" style="color: #004aad;"><?= $totalUsuarios ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+                <div class="card shadow rounded-4 border-0">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-muted mb-2">Reservas Cadastradas</h5>
+                        <p class="display-4 fw-bold" style="color: #004aad;"><?= $totalReservas ?></p>
                     </div>
                 </div>
             </div>

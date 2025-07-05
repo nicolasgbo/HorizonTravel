@@ -509,6 +509,53 @@ footer a:hover {
 }
 
 
+.container-reserva {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+h2 {
+    color: #004aad;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #004aad;
+    border: none;
+    font-weight: bold;
+    color: #fff; /* texto branco */
+    padding: 10px 20px; /* aumenta o tamanho do botão */
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#mensagem p {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+select[name="idPlano"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+form#formReserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 
 
 

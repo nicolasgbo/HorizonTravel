@@ -31,7 +31,7 @@ include_once INCLUDE_PATH . '/header.php';
                             <li>✓ Parcelamento em até 3x sem juros</li>
                             <hr>
                         </ul>
-                        <a href="#" class="btn btn-selecionar">Selecionar</a>
+                        <a href="/HorizonTravel/pages/reservarPlano.php" class="btn btn-selecionar">Selecionar</a>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@ include_once INCLUDE_PATH . '/header.php';
                             <li>✓ Parcelamento em até 6x sem juros</li>
                             <hr>
                         </ul>
-                        <a href="#" class="btn btn-selecionar">Selecionar</a>
+                        <a href="/HorizonTravel/pages/reservarPlano.php" class="btn btn-selecionar">Selecionar</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@ include_once INCLUDE_PATH . '/header.php';
                             <li>✓ Parcelamento em até 12x sem juros</li>
                             <hr>
                         </ul>
-                        <a href="#" class="btn btn-selecionar">Selecionar</a>
+                        <a href="/HorizonTravel/pages/reservarPlano.php" class="btn btn-selecionar">Selecionar</a>
                     </div>
                 </div>
             </div>
