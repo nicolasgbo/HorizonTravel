@@ -29,7 +29,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <li class="nav-item mx-2 d-flex align-items-center">
                     <span class="navbar-text fw-bold" style="color: #004aad;">
                         <?php if (isset($_SESSION['nomeUsuario'])): ?>
-                            Olá, Administrador <?= htmlspecialchars($_SESSION['nomeUsuario']) ?>
+                            Olá, <?= htmlspecialchars($_SESSION['nomeUsuario']) ?>
                         <?php endif; ?>
                     </span>
                 </li>
