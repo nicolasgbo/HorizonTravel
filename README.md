@@ -1,5 +1,6 @@
 ## 🧭 Horizon Travel
 Horizon Travel é uma plataforma web de reservas de passeios e pacotes turísticos. O sistema permite o cadastro de usuários, gerenciamento de passeios e a realização de reservas online de forma prática e eficiente. 
+
 O Sistema Horizon Travel foi desenvolvido como forma de trabalho acadêmico para a matéria Programação Web, ministrada pelo professor [Paulo Ricardo de Souza Silva](https://github.com/pauloricardosouza).
 
 ## 📸 Tela do sistema
